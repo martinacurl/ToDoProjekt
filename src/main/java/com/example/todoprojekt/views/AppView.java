@@ -27,15 +27,8 @@ public class AppView extends AppLayout {
 
         H1 navbarTitle = new H1("Much toDo");
 
-        navbarLayout.setWidthFull();
-        navbarLayout.setMargin(true);
-        navbarLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.BETWEEN);
-        navbarLayout.setAlignItems(FlexComponent.Alignment.BASELINE);
-
         Button loginButton = new Button("Login", evt -> UI.getCurrent().navigate(LoginView.class));
         loginButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-
-//      Button logoutButton = new Button("Logout", evt -> PrincipalUtils.logOut());
 
         String name = PrincipalUtils.getName();
         Avatar avatar = new Avatar(name);
@@ -71,6 +64,11 @@ public class AppView extends AppLayout {
         }
 
         navbarLayout.add(PrincipalUtils.isAuthenticated() ? menuBar : loginButton);
+
+        navbarLayout.setWidthFull();
+        navbarLayout.setMargin(true);
+        navbarLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.BETWEEN);
+        navbarLayout.setAlignItems(FlexComponent.Alignment.BASELINE);
 
         addToNavbar(navbarLayout);
     }

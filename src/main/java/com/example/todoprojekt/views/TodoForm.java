@@ -35,12 +35,6 @@ public class TodoForm extends FormLayout {
         saveButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
 
         add(task, saveButton);
-
-/*      ????????
-        task.setWidth("80%");
-        saveButton.setWidth("10%");
-        setSizeFull();
-*/
     }
 
     public void onSave() {
@@ -48,7 +42,7 @@ public class TodoForm extends FormLayout {
         todoService.createTodo(todo);
         setTodo();
         editorView.updateItems();
-    };
+    }
 
     public void setTodo() {
         Todo newTodo = new Todo();

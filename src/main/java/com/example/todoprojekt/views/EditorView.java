@@ -65,9 +65,7 @@ public class EditorView extends VerticalLayout {
 
             return new HorizontalLayout(done, task, update, remove);
         });
-
         add(grid);
-
     }
 
     public void updateItems() {

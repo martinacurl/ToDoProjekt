@@ -30,10 +30,8 @@ public class TodoView extends VerticalLayout {
             Checkbox done = new Checkbox();
             done.setValue(todo.isDone());
             done.addValueChangeListener(evt -> {
-                System.out.println(evt.getValue());
                 todo.setDone(evt.getValue());
                 todoService.updateTodoById(todo.getId(), todo);});
-
 
             done.setLabel(todo.getTask());
 

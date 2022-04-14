@@ -2,7 +2,6 @@ package com.example.todoprojekt.security;
 
 import com.example.todoprojekt.entities.AppUser;
 import com.example.todoprojekt.repositories.AppUserRepository;
-import com.example.todoprojekt.views.AppView;
 import com.example.todoprojekt.views.HelloView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.server.VaadinServletRequest;
